@@ -43,14 +43,14 @@ def view_user_details(connection):
        
         user = cursor.fetchone()        
 
-        if user:
+        if user: # checking if the user exists
             print( user[0])  
             print( user[1])
             print( user[2])
         else:
             print("user not found.")
 
-    except Error as e:
+    except Error as e: # returning if the user doesnt exists
         print(f"Error: {e}")
 
 def display_all_users(connection):
@@ -74,7 +74,7 @@ def display_all_users(connection):
         
         
             for user in users:
-                user_id, name, email = user
+                user_id, name, email = user # unpacking the user tuple into variables to print the user details
                 print(f"{user_id}| {name}| {email}")
 
     except Error as e:
