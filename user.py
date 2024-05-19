@@ -25,21 +25,6 @@ def add_new_user(connection):
 
     except Error as e:
         print(f"Error: {e}")
-       
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
 def view_user_details(connection):
     print("View user details")
@@ -68,21 +53,6 @@ def view_user_details(connection):
     except Error as e:
         print(f"Error: {e}")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def display_all_users(connection):
     try:
         
@@ -100,10 +70,8 @@ def display_all_users(connection):
         if not users:
             print("No users found.")
         else:
-            
-           
-         
-
+            print("Users Displayed")
+        
         
             for user in users:
                 user_id, name, email = user
